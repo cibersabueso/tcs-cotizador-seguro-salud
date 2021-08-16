@@ -1,0 +1,135 @@
+$main_page__base_width: 340px;
+$main_page__base_width2: 680px;
+$main_page__base_height: 640px;
+
+$main_page__illustration_width: 270px;
+$main_page__illustration_height: 370px;
+
+.main {
+  display: grid;
+  grid-template-columns: $main_page__base_width2 calc(
+      100% - #{$main_page__base_width2}
+    );
+  justify-content: space-between;
+  align-content: space-between;
+  width: 100%;
+  height: 100vh;
+
+  &__banner {
+    width: $main_page__base_width2;
+    &--base {
+      @extend .main__banner;
+      height: $main_page__base_height;
+      width: 100%;
+    }
+
+    &--content {
+      @extend .main__banner;
+      width: max-content;
+      height: 480px;
+      position: fixed;
+      top: 112px;
+      left: 90px;
+      z-index: 1;
+      &__title {
+        width: max-content;
+
+        & h2 {
+          margin-top: 0;
+          margin-bottom: 8px;
+          font-size: 36px;
+          line-height: 48px;
+          font-weight: 300;
+          display: inline-block;
+          color: $white;
+          & strong {
+            font-weight: 500;
+          }
+        }
+      }
+
+      &__list {
+        width: max-content;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background: transparent;
+        display: block;
+        margin-bottom: 32px;
+        margin-top: 12px;
+        margin-left: -20px;
+        border: none;
+        text-align: start;
+        & li {
+          list-style-type: none;
+          margin-bottom: 8px;
+          padding: 6px 20px;
+          display: flex;
+          justify-content: start;
+          background: transparent;
+          color: #e4e4e4;
+          cursor: pointer;
+
+          .icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 4px;
+          }
+        }
+      }
+
+      &__author {
+        color: #a3abcc;
+        font-size: 12px;
+        line-height: 24px;
+        position: absolute;
+        top: calc(100% - 24px);
+      }
+    }
+
+    &--illustration {
+      @extend .main__banner;
+      position: absolute;
+      @include illustration-position(
+        $main_page__base_width2,
+        $main_page__base_height
+      );
+      width: $main_page__illustration_width;
+      height: $main_page__illustration_height;
+    }
+  }
+
+  &__forms {
+    width: 65%;
+    margin: auto;
+
+    &--title {
+      @extend .main__forms;
+      width: 100%;
+      margin: 0;
+
+      & h2 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 28px;
+        line-height: 36px;
+        font-weight: 300;
+        display: inline-block;
+        color: #494f66;
+      }
+      & p {
+        margin-top: 0;
+        margin-bottom: 48px;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 18px;
+        display: inline-block;
+        color: #808080;
+
+        & strong {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

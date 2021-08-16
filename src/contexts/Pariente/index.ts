@@ -1,0 +1,1 @@
+export { ParienteContext, default } from './Pariente'

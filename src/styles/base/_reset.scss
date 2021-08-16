@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+  font-family: Lato, sans-serif;
+  outline: 0;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  letter-spacing: -0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.show {
+  display: grid;
+}
+
+.hide {
+  display: none;
+}
+
+// Font size
+.fs {
+  &-1 {
+    font-size: $fs-1;
+  }
+
+  &-2 {
+    font-size: $fs-2;
+  }
+
+  &-3 {
+    font-size: $fs-3;
+  }
+
+  &-4 {
+    font-size: $fs-4;
+  }
+
+  &-5 {
+    font-size: $fs-5;
+  }
+
+  &-6 {
+    font-size: $fs-6;
+  }
+}
+
+// Font Weigth
+.fw {
+  &-bold {
+    font-weight: $font-weight-bold !important;
+  }
+
+  &-normal {
+    font-weight: $font-weight-normal !important;
+  }
+
+  &-light {
+    font-weight: $font-weight-light !important;
+  }
+}
+
+// Font Style
+.fst-italic {
+  font-style: italic !important;
+}
+
+// Line Height
+.lh-1 {
+  line-height: 1 !important;
+}
+
+.lh-sm {
+  line-height: 1.25 !important;
+}
+
+.lh-base {
+  line-height: 1.5 !important;
+}
+
+.lh-lg {
+  line-height: 2 !important;
+}
+
+// Text variants
+.text {
+  &-primary {
+    color: $primary;
+    font-size: $fs-6;
+  }
+  &-secondary {
+    color: $secondary;
+    font-size: $fs-6;
+  }
+  &-success {
+    color: $success;
+    font-size: $fs-6;
+  }
+  &-info {
+    color: $info;
+    font-size: $fs-6;
+  }
+  &-warning {
+    color: $warning;
+    font-size: $fs-6;
+  }
+  &-danger {
+    color: $danger;
+    font-size: $fs-6;
+  }
+  &-light {
+    color: $light;
+    font-size: $fs-6;
+  }
+  &-dark {
+    color: $dark;
+    font-size: $fs-6;
+  }
+  &-muted {
+    color: #a3abcc;
+    font-size: 16px;
+  }
+
+  &-decoration-underline {
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  font-size: $fs-6;
+  padding: 16px 32px;
+  margin: 0;
+  min-width: 220px;
+  max-width: 360px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.8px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+
+  &__primary {
+    @extend .btn;
+    background-color: $primary;
+    color: $white;
+  }
+
+  &__secondary {
+    @extend .btn;
+    background-color: $secondary;
+    color: $white;
+  }
+
+  &__success {
+    @extend .btn;
+    background-color: $success;
+    color: $white;
+  }
+
+  &__info {
+    @extend .btn;
+    background-color: $info;
+    color: $white;
+  }
+
+  &__warning {
+    @extend .btn;
+    background-color: $warning;
+    color: $white;
+  }
+
+  &__danger {
+    @extend .btn;
+    background-color: $danger;
+    color: $white;
+  }
+
+  &__light {
+    @extend .btn;
+    background-color: $light;
+    color: $gray-100;
+  }
+
+  &__dark {
+    @extend .btn;
+    background-color: $dark;
+    color: $white;
+  }
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.right {
+  float: right;
+}
+
+.mb {
+  &-0 {
+    margin-bottom: 0em !important;
+  }
+  &-1 {
+    margin-bottom: 1em !important;
+  }
+  &-2 {
+    margin-bottom: 2em !important;
+  }
+  &-3 {
+    margin-bottom: 3em !important;
+  }
+  &-4 {
+    margin-bottom: 4em !important;
+  }
+  &-5 {
+    margin-bottom: 5em !important;
+  }
+}
